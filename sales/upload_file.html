@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <form name="form">
+            <div class="btn btn-default" ngf-select ng-model="files" ngf-multiple="true">选择文件 (可多选上传)</div>
+            <!--<div ngf-drop ng-model="files" class="drop-box">拖拽上传</div>-->
+            <button class="btn btn-primary" ng-click="submit()">上传</button>
+            <p></p>
+            <ul class="list-group" style="margin-bottom: 0;">
+                <li class="list-group-item" ng-repeat="item in files">
+                    {{item.name}}
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>

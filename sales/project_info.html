@@ -1,0 +1,23 @@
+<style>
+    .breadcrumb > li + li:before {
+        padding: 0 5px;
+        color: #ccc;
+        content: "/\00a0"
+    }
+</style>
+<div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1" style="background: #fff;">
+        <br/>
+        <!-- 如果调取接口, 那么1就是项目id,调用$scope变量即可 {{project.id}} -->
+        <ol class="breadcrumb" style="text-align: center;">
+            <li><a href="#/projects/list/1/speed" ui-sref-opts="{reload: true}" class="{{speed}}">进度</a></li>
+            <li><a href="#/projects/list/1/assessment" ui-sref-opts="{reload: true}" class="{{assessment}}">评估信息</a></li>
+            <li><a href="#/projects/list/1/project" ui-sref-opts="{reload: true}" class="{{project}}">项目信息</a></li>
+            <li><a href="#/projects/list/1/person" class="{{person}}">参与人员</a></li>
+            <li><a href="#/projects/list/1/files" class="{{files}}">文件</a></li>
+        </ol>
+        <ui-view>
+            <div ng-include="'speed.html'"></div>
+        </ui-view>
+    </div>
+</div>

@@ -1,0 +1,199 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+
+        <uib-tabset active="activeJustified" justified="true">
+            <uib-tab index="0" heading="从数据库中选择渠道">
+                <br/>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5">
+                        <input type="text" ng-model="name" placeholder="姓名" class="form-control"/>
+                    </div>
+                    <div class="col-xs-12 col-sm-5">
+                        <input type="text" ng-model="phone" placeholder="手机" class="form-control"/>
+                    </div>
+                    <div class="col-xs-12 col-sm-2">
+                        <input type="button" class="btn btn-primary btn-block" value="查询"/>
+                    </div>
+                </div>
+                <br/>
+                <ul class="list-group text-left">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <input type="radio" name="checkClient" ng-checked="true"/>
+                            </div>
+                            <div class="col-xs-3">
+                                蒋成武
+                            </div>
+                            <div class="col-xs-5">
+                                上海金仕达卫宁软件
+                            </div>
+                            <div class="col-xs-3">
+                                13987887655
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <input type="radio" name="checkClient"/>
+                            </div>
+                            <div class="col-xs-3">
+                                李师师
+                            </div>
+                            <div class="col-xs-5">
+                                乾成律师事务所
+                            </div>
+                            <div class="col-xs-3">
+                                13987887655
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <input type="radio" name="checkClient"/>
+                            </div>
+                            <div class="col-xs-3">
+                                王冰冰
+                            </div>
+                            <div class="col-xs-5">
+                                帮瀛法务机构
+                            </div>
+                            <div class="col-xs-3">
+                                13987887655
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="text-right">
+                    <a ui-sref="projects.new.four" class="btn btn-primary">下一步</a>
+                </p>
+            </uib-tab>
+            <uib-tab index="1" heading="填写渠道">
+                <br/>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">渠道类型: </label>
+                        <div class="col-sm-10">
+                            <select ng-model="type" class="form-control">
+                                <option value="个人">个人</option>
+                                <option value="机构">机构</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal w5c-form demo-form" role="form"
+                      w5c-form-validate="vm.validateOptions" novalidate name="validateForm" ng-if="type == '个人'">
+                    <div class="person">
+                        <p>
+                            <input type="text" name="name" ng-model="vm.entity.name" required class="form-control"
+                                   placeholder="输入姓名">
+                        </p>
+                        <p>
+                            <select class="form-control" ng-model="sex">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </p>
+                        <p>
+                            <input type="number" name="phone" ng-model="vm.entiry.phone" class="form-control" required
+                                   placeholder="手机" ng-pattern="/^[1][35789][0-9]{9}$/"/>
+                        </p>
+                        <p>
+                            <input type="text" name="telephone" ng-model="vm.telephone" class="form-control"
+                                   placeholder="电话"/>
+                        </p>
+                        <p>
+                            <input type="email" name="email" ng-model="vm.entity.email" class="form-control"
+                                   placeholder="输入邮箱">
+                        </p>
+                        <p>
+                            <input type="text" ng-model="firm" class="form-control" placeholder="单位"/>
+                        </p>
+                        <p>
+                            <select ng-model="vm.entity.type" class="form-control" placeholder="类型">
+                                <option>帮瀛员工</option>
+                                <option>律师</option>
+                                <option>渠道律师</option>
+                                <option>个人客户</option>
+                                <option>机构客户</option>
+                                <option>个人渠道</option>
+                                <option>机构渠道</option>
+                            </select>
+                        </p>
+                        <p>
+                            <input type="text" ng-model="vm.entity.province" class="form-control" placeholder="所在省"/>
+                        </p>
+                        <p>
+                            <input type="text" ng-model="vm.entity.city" class="form-control" placeholder="所在市"/>
+                        </p>
+                        <p>
+                            <input type="text" ng-model="vm.entity.address" class="form-control" placeholder="联系地址"/>
+                        </p>
+                        <p></p>
+                        <div class="panel">
+                            <div style="margin-bottom:1.25rem" class="ueditor" ng-model="vm.entity.remarks"
+                                 config="_simpleConfig"></div>
+                        </div>
+                    </div>
+                    <p class="text-right">
+                        <a class="btn btn-primary" w5c-form-submit="vm.saveEntity($event)">下一步</a>
+                    </p>
+                </form>
+                <form class="form-horizontal w5c-form demo-form" role="form"
+                      w5c-form-validate="vm.validateOptions" novalidate name="validateForm" ng-if="type == '机构'">
+                    <div class="person">
+                        <p>
+                            <input type="text" name="firm" ng-model="vm.entity.firm" required class="form-control"
+                                   placeholder="机构名称">
+                        </p>
+                        <p>
+                            <input type="text" name="name" ng-model="vm.entity.name" required class="form-control"
+                                   placeholder="联系人姓名">
+                        </p>
+                        <p>
+                            <select class="form-control" ng-model="sex">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                                <!--<option ng-repeat="item in yearList">{{item.year}}</option>-->
+                            </select>
+                        </p>
+                        <p>
+                            <input type="number" name="phone" ng-model="vm.entiry.phone" class="form-control" required
+                                   placeholder="联系人手机" ng-pattern="/^[1][35789][0-9]{9}$/"/>
+                        </p>
+                        <p>
+                            <input type="text" name="telephone" ng-model="vm.telephone" class="form-control"
+                                   placeholder="联系人电话"/>
+                        </p>
+                        <p>
+                            <input type="email" name="email" ng-model="vm.entity.email" class="form-control"
+                                   placeholder="联系人邮箱">
+                        </p>
+                        <p>
+                            <input type="text" ng-model="vm.entity.position" class="form-control" placeholder="联系人职务"/>
+                        </p>
+                        <p>
+                            <input type="text" ng-model="vm.entity.province" class="form-control" placeholder="所在省"/>
+                        </p>
+                        <p>
+                            <input type="text" ng-model="vm.entity.city" class="form-control" placeholder="所在市"/>
+                        </p>
+                        <p>
+                            <input type="text" ng-model="vm.entity.address" class="form-control" placeholder="联系地址"/>
+                        </p>
+                        <p></p>
+                        <div class="panel">
+                            <div style="margin-bottom:1.25rem" class="ueditor" ng-model="vm.entity.remarks"
+                                 config="_simpleConfig"></div>
+                        </div>
+                    </div>
+                    <p class="text-right">
+                        <a class="btn btn-primary" w5c-form-submit="vm.saveEntity($event)">下一步</a>
+                    </p>
+                </form>
+            </uib-tab>
+        </uib-tabset>
+    </div>
+</div>

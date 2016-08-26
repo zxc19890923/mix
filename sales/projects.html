@@ -1,0 +1,11 @@
+<div class="col-xs-12 col-sm-2">
+    <ul class="leftBar">
+        <li><a ui-sref="projects.list" class="{{listStatus}}"><i class="fa fa-list"></i> 项目列表</a></li>
+        <li><a ui-sref="projects.new" class="{{newStatus}}"><i class="fa fa-plus"></i> 新建项目</a></li>
+    </ul>
+</div>
+<div class="col-xs-12 col-sm-10 right" style="background: #fff;">
+    <ui-view>
+        <div ng-include="'projectList.html'"></div>
+    </ui-view>
+</div>

@@ -1,0 +1,144 @@
+<br/>
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="form-horizontal">
+            <div class="row">
+                <label class="col-sm-2 control-label">客户类型: </label>
+                <div class="col-sm-10">
+                    <select ng-model="type" class="form-control">
+                        <option value="个人">个人</option>
+                        <option value="机构">机构</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <p></p>
+        <form class="form-horizontal w5c-form demo-form" role="form"
+              w5c-form-validate="vm.validateOptions" novalidate name="validateForm" ng-if="type == '个人'">
+            <div class="person">
+                <p>
+                    <select class="form-control">
+                        <option value="普通">普通</option>
+                        <option value="重要">重要</option>
+                        <option value="核心">核心</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="text" name="name" ng-model="vm.entity.name" required class="form-control"
+                           placeholder="输入姓名">
+                </p>
+                <p>
+                    <select class="form-control" ng-model="sex">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="number" name="phone" ng-model="vm.entiry.phone" class="form-control" required
+                           placeholder="手机" ng-pattern="/^[1][35789][0-9]{9}$/"/>
+                </p>
+                <p>
+                    <input type="text" name="telephone" ng-model="vm.telephone" class="form-control"
+                           placeholder="电话"/>
+                </p>
+                <p>
+                    <input type="email" name="email" ng-model="vm.entity.email" class="form-control"
+                           placeholder="输入邮箱">
+                </p>
+                <p>
+                    <input type="text" ng-model="firm" class="form-control" placeholder="单位"/>
+                </p>
+                <p>
+                    <input type="text" ng-model="vm.entity.position" class="form-control" placeholder="职务"/>
+                </p>
+                <p>
+                    <select ng-model="vm.entity.province" class="form-control" ng-change="provinceChange()">
+                        <option value="{{item.name}}" ng-repeat="item in province track by $index">{{item.name}}
+                        </option>
+                    </select>
+                </p>
+                <p>
+                    <select ng-model="vm.entity.city" class="form-control">
+                        <option value="{{item}}" ng-repeat="item in city track by $index">{{item}}</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="text" ng-model="vm.entity.address" class="form-control" placeholder="联系地址"/>
+                </p>
+                <p>
+                    <input type="text" ng-model="vm.entity.agent" class="form-control" placeholder="代理人"/>
+                </p>
+                <p>
+                    <input type="text" ng-model="vm.entity.agentPhone" class="form-control"
+                           placeholder="代理人手机"/>
+                </p>
+                <p></p>
+                <div class="panel">
+                    <div style="margin-bottom:1.25rem" class="ueditor" ng-model="vm.entity.remarks"
+                         config="_simpleConfig"></div>
+                </div>
+            </div>
+            <p class="text-right">
+                <a class="btn btn-primary" w5c-form-submit="vm.saveEntity($event)">下一步</a>
+            </p>
+        </form>
+        <form class="form-horizontal w5c-form demo-form" role="form"
+              w5c-form-validate="vm.validateOptions" novalidate name="validateForm" ng-if="type == '机构'">
+            <div class="person">
+                <p>
+                    <input type="text" name="firm" ng-model="vm.entity.firm" required class="form-control"
+                           placeholder="机构名称">
+                </p>
+                <p>
+                    <input type="text" name="name" ng-model="vm.entity.name" required class="form-control"
+                           placeholder="联系人姓名">
+                </p>
+                <p>
+                    <select class="form-control" ng-model="sex">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                        <!--<option ng-repeat="item in yearList">{{item.year}}</option>-->
+                    </select>
+                </p>
+                <p>
+                    <input type="number" name="phone" ng-model="vm.entiry.phone" class="form-control" required
+                           placeholder="联系人手机" ng-pattern="/^[1][35789][0-9]{9}$/"/>
+                </p>
+                <p>
+                    <input type="text" name="telephone" ng-model="vm.telephone" class="form-control"
+                           placeholder="联系人电话"/>
+                </p>
+                <p>
+                    <input type="email" name="email" ng-model="vm.entity.email" class="form-control"
+                           placeholder="联系人邮箱">
+                </p>
+                <p>
+                    <input type="text" ng-model="vm.entity.position" class="form-control" placeholder="联系人职务"/>
+                </p>
+                <p>
+                    <select ng-model="vm.entity.province" class="form-control" ng-change="provinceChange()">
+                        <option value="{{item.name}}" ng-repeat="item in province track by $index">{{item.name}}
+                        </option>
+                    </select>
+                </p>
+                <p>
+                    <select ng-model="vm.entity.city" class="form-control">
+                        <option value="{{item}}" ng-repeat="item in city track by $index">{{item}}</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="text" ng-model="vm.entity.address" class="form-control" placeholder="联系地址"/>
+                </p>
+                <p></p>
+                <div class="panel">
+                    <div style="margin-bottom:1.25rem" class="ueditor" ng-model="vm.entity.remarks"
+                         config="_simpleConfig"></div>
+                </div>
+            </div>
+            <p class="text-right">
+                <a class="btn btn-primary" w5c-form-submit="vm.saveEntity($event)">下一步</a>
+            </p>
+        </form>
+    </div>
+</div>
+</div>

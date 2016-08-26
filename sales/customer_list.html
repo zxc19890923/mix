@@ -1,0 +1,314 @@
+<br/>
+<div class="row">
+    <div class="col-sm-4">
+        <p>
+            <select class="form-control">
+                <option value="客户级别">客户级别</option>
+                <option value="全部">全部</option>
+                <option value="普通">普通</option>
+                <option value="重点">重点</option>
+                <option value="核心">核心</option>
+            </select>
+        </p>
+    </div>
+    <div class="col-sm-4">
+        <p>
+            <select class="form-control">
+                <option value="客户类型">客户类型</option>
+                <option value="个人">个人</option>
+            </select>
+        </p>
+    </div>
+    <div class="col-sm-4">
+        <p>
+            <input type="text" ng-model="name" placeholder="姓名" class="form-control"/>
+        </p>
+    </div>
+    <div class="col-sm-4">
+        <p>
+            <select ng-model="vm.entity.province" class="form-control" ng-change="provinceChange()">
+                <option value="{{item.name}}" ng-repeat="item in province track by $index">{{item.name}}</option>
+            </select>
+        </p>
+    </div>
+    <div class="col-sm-4">
+        <p>
+            <select ng-model="vm.entity.city" class="form-control">
+                <option value="{{item}}" ng-repeat="item in city track by $index">{{item}}</option>
+            </select>
+        </p>
+    </div>
+    <div class="col-sm-4">
+        <a class="btn btn-primary btn-block">查询</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <!-- 这里的1是项目id, 后台返回数据里面获取 $scope.project.id   {{id}} -->
+                <p class="text-right" style="margin: 0"><i class="fa fa-star"></i></p>
+                <a href="#/customers/info/1">
+                    <p><i class="fa fa-user"></i> 张大伟</p>
+                    <p><i class="fa fa-home"></i> 陕西延长石油有限公司</p>
+                    <p><i class="fa fa-phone"></i> 13289908765</p>
+                    <img src="../common/images/male.jpg" class="img-responsive img-circle"
+                         style="width: 80px; position: absolute; right: 30px; top: 40px; border: 1px solid #ddd"/>
+                </a>
+            </div>
+            <!-- 功能按钮 -->
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <!-- 这里的1是项目id, 后台返回数据里面获取 $scope.project.id   {{id}} -->
+                <p class="text-right" style="margin: 0"><i class="fa fa-star"></i></p>
+                <a href="#/customers/list/1">
+                    <p><i class="fa fa-user"></i> 张大伟</p>
+                    <p><i class="fa fa-home"></i> 陕西延长石油有限公司</p>
+                    <p><i class="fa fa-phone"></i> 13289908765</p>
+                    <img src="../common/images/female.jpg" class="img-responsive img-circle"
+                         style="width: 80px; position: absolute; right: 30px; top: 40px; border: 1px solid #ddd"/>
+                </a>
+            </div>
+            <!-- 功能按钮 -->
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <!-- 这里的1是项目id, 后台返回数据里面获取 $scope.project.id   {{id}} -->
+                <p class="text-right" style="margin: 0"><i class="fa fa-star"></i></p>
+                <a href="#/customers/list/1">
+                    <p><i class="fa fa-user"></i> 张大伟</p>
+                    <p><i class="fa fa-home"></i> 陕西延长石油有限公司</p>
+                    <p><i class="fa fa-phone"></i> 13289908765</p>
+                    <img src="../common/images/male.jpg" class="img-responsive img-circle"
+                         style="width: 80px; position: absolute; right: 30px; top: 40px; border: 1px solid #ddd"/>
+                </a>
+            </div>
+            <!-- 功能按钮 -->
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <!-- 这里的1是项目id, 后台返回数据里面获取 $scope.project.id   {{id}} -->
+                <p class="text-right" style="margin: 0"><i class="fa fa-star"></i></p>
+                <a href="#/customers/list/1">
+                    <p><i class="fa fa-user"></i> 张大伟</p>
+                    <p><i class="fa fa-home"></i> 陕西延长石油有限公司</p>
+                    <p><i class="fa fa-phone"></i> 13289908765</p>
+                    <img src="../common/images/male.jpg" class="img-responsive img-circle"
+                         style="width: 80px; position: absolute; right: 30px; top: 40px; border: 1px solid #ddd"/>
+                </a>
+            </div>
+            <!-- 功能按钮 -->
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <!-- 这里的1是项目id, 后台返回数据里面获取 $scope.project.id   {{id}} -->
+                <p class="text-right" style="margin: 0"><i class="fa fa-star"></i></p>
+                <a href="#/customers/list/1">
+                    <p><i class="fa fa-user"></i> 张大伟</p>
+                    <p><i class="fa fa-home"></i> 陕西延长石油有限公司</p>
+                    <p><i class="fa fa-phone"></i> 13289908765</p>
+                    <img src="../common/images/male.jpg" class="img-responsive img-circle"
+                         style="width: 80px; position: absolute; right: 30px; top: 40px; border: 1px solid #ddd"/>
+                </a>
+            </div>
+            <!-- 功能按钮 -->
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <!-- 这里的1是项目id, 后台返回数据里面获取 $scope.project.id   {{id}} -->
+                <p class="text-right" style="margin: 0"><i class="fa fa-star"></i></p>
+                <a href="#/customers/list/1">
+                    <p><i class="fa fa-user"></i> 张大伟</p>
+                    <p><i class="fa fa-home"></i> 陕西延长石油有限公司</p>
+                    <p><i class="fa fa-phone"></i> 13289908765</p>
+                    <img src="../common/images/female.jpg" class="img-responsive img-circle"
+                         style="width: 80px; position: absolute; right: 30px; top: 40px; border: 1px solid #ddd"/>
+                </a>
+            </div>
+            <!-- 功能按钮 -->
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <!-- 这里的1是项目id, 后台返回数据里面获取 $scope.project.id   {{id}} -->
+                <p class="text-right" style="margin: 0"><i class="fa fa-star"></i></p>
+                <a href="#/customers/list/1">
+                    <p><i class="fa fa-user"></i> 张大伟</p>
+                    <p><i class="fa fa-home"></i> 陕西延长石油有限公司</p>
+                    <p><i class="fa fa-phone"></i> 13289908765</p>
+                    <img src="../common/images/male.jpg" class="img-responsive img-circle"
+                         style="width: 80px; position: absolute; right: 30px; top: 40px; border: 1px solid #ddd"/>
+                </a>
+            </div>
+            <!-- 功能按钮 -->
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <!--分页-->
+        <div class="page">
+            <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize"
+                            class="pagination-sm pull-left"
+                            ng-change="pageChanged(bigCurrentPage)" boundary-links="true" boundary-links-numbers="true"
+                            rotate="false"></uib-pagination>
+            <span style="position: relative; top: 25px; margin-left: 10px">总共: <b
+                    class="text-primary">{{maxItems}}</b>条</span>
+        </div>
+    </div>
+</div>
+<!-- 模板 -->
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <ul>
+            <li ng-repeat="item in $ctrl.items">
+                <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
+            </li>
+        </ul>
+        Selected: <b>{{ $ctrl.selected.item }}</b>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" type="button" ng-click="$ctrl.ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+    </div>
+</script>
+<!-- 模态框（Modal） 补充材料 -->
+<div class="modal fade" id="uploadfile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">补充材料</h4>
+            </div>
+            <div class="modal-body">
+                <form name="form">
+                    <div class="btn btn-default" ngf-select ng-model="files" ngf-multiple="true">选择文件 (可多选上传)</div>
+                    <!--<div ngf-drop ng-model="files" class="drop-box">拖拽上传</div>-->
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="item in files">
+                            {{item.name}}
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button class="btn btn-default" ng-click="submit()">上传</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal） 提交分析师 -->
+<div class="modal fade" id="analyst" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="analystLabel">提交分析师</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group" style="margin-bottom: 0;">
+                    <li class="list-group-item">
+                        <input type="radio" name="analyst"/> 分析师一
+                    </li>
+                    <li class="list-group-item">
+                        <input type="radio" name="analyst"/> 分析师二
+                    </li>
+                    <li class="list-group-item">
+                        <input type="radio" name="analyst"/> 分析师三
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default">提交</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal） 签约 -->
+<div class="modal fade" id="sign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="signLabel">签约</h4>
+            </div>
+            <div class="modal-body">
+                <form name="form">
+                    <p>
+                        <input type="date" name="signDate" placeholder="签约日期" class="form-control"/>
+                    </p>
+                    <div class="btn btn-default" ngf-select ng-model="files" ngf-multiple="true">上传电子合同 (可多选上传)
+                    </div>
+                    <ul class="list-group" style="margin-bottom: 10px">
+                        <li class="list-group-item" ng-repeat="item in files">
+                            {{item.name}}
+                        </li>
+                    </ul>
+                    <!--<div ngf-drop ng-model="files" class="drop-box">拖拽上传</div>-->
+                    <p>
+                        <input type="number" name="money" class="form-control" ng-modle="money"
+                               placeholder="签约标的 (万元)"/>
+                    </p>
+                    <p class="text-primary">收费情况</p>
+                    <p>
+                        <input type="number" name="beforeMoney" class="form-control" ng-modle="beforeMoney"
+                               placeholder="前期 (万元)"/>
+                    </p>
+                    <p>
+                        后期: <span class="text-danger">{{sign.result}}</span>万元
+                    </p>
+                    <p>
+                        <select class="form-control" ng-model="charge">
+                            <option value="">收费方式</option>
+                            <option value="比例">比例</option>
+                            <option value="固定值">固定值</option>
+                            <option value="混合">混合</option>
+                        </select>
+                    </p>
+                    <div ng-if="charge == '比例'">
+                        <p>
+                            <input type="text" ng-model="money"/> 万 * <input type="text" ng-model="percent"/> % = <span
+                                ng-model="sign.result" class="text-danger">0</span>万元
+                        </p>
+                    </div>
+                    <div ng-if="charge=='固定值'">
+                        <p>
+                            <input type="text" ng-model="sign.result"/> 万元
+                        </p>
+                    </div>
+                    <div ng-if="charge=='混合'">
+                        <p>
+                            <input type="text" ng-model="money"/> 万 + <input type="text" ng-model="money"/> 万 * <input
+                                type="text" ng-model="percent" style="width: 50px"/> % = <span ng-model="sign.result"
+                                                                                               class="text-danger">0</span>万元
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" ng-click="submit()">提交</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<br/>
+<br/>
+

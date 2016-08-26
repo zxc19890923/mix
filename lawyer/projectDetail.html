@@ -1,0 +1,24 @@
+<div class="col-xs-12 col-sm-12 right" style="background: #fff;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1" style="background: #fff;">
+            <br/>
+            <blockquote>
+                <p style="font-size: 18px" class="text-theme">
+                    <span class="active" style="padding-right: 20px">{{projectName}}</span><span>编号: {{projectNum}}</span>
+                </p>
+            </blockquote>
+            <br/>
+            <!-- 如果调取接口, 那么1就是项目id,调用$scope变量即可 {{project.id}} -->
+            <ul id="myTab" class="nav nav-tabs">
+                <li ng-repeat="item in navigationItems" ng-class="{active: detailSelectIndex == $index}">
+                    <a href="#/projectDetail/1/{{item.key}}" ng-click="selectedItem($index)">{{item.name}}
+                    </a>
+                </li>
+            </ul>
+            <br/>
+            <ui-view>
+                <!--<div ng-include="'speed.html'"></div>-->
+            </ui-view>
+        </div>
+    </div>
+</div>

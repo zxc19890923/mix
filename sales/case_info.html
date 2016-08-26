@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <p>
+            <input type="text" ng-model="caseName" class="form-control" placeholder="案件名称"/>
+        </p>
+        <p>
+            <input type="text" ng-model="money" class="form-control" placeholder="标的额 (单位: 万元)"/>
+        </p>
+        <p>
+            <input type="text" ng-model="area" class="form-control" placeholder="争议领域"/>
+        </p>
+        <p>
+            <input type="text" ng-model="attitude" class="form-control" placeholder="各方态度"/>
+        </p>
+        <p>是否采取救济手段: <input type="checkbox" ng-model="means" ng-checked="true"/></p>
+        <p>
+            <input type="text" class="form-control" ng-show="means==true" placeholder="具体途径、所处阶段、效果"/>
+        </p>
+        <p></p>
+        <!--<div class="panel">-->
+            <!--<div style="margin-bottom:1.25rem" class="ueditor" ng-model="caseDirective"-->
+                 <!--config="_simpleConfig"></div>-->
+        <!--</div>-->
+        <div class="panel">
+            <div style="margin-bottom:1.25rem" class="ueditor" ng-model="caseDirective"
+                 config="_simpleConfig"></div>
+        </div>
+        <p></p>
+        <div class="panel">
+            <div style="margin-bottom:1.25rem" class="ueditor" ng-model="customerTarget"
+                 config="_simpleConfig"></div>
+        </div>
+        <p></p>
+        <div class="panel">
+            <div style="margin-bottom:1.25rem" class="ueditor" ng-model="moneyClues"
+                 config="_simpleConfig"></div>
+        </div>
+        <p class="text-right">
+            <a class="btn btn-primary" ng-click="vm.saveEntity()">下一步</a>
+        </p>
+    </div>
+</div>
